@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Portafolio de Eder Jaramillo: diseño gráfico, fotografía y video en Ameca y Guadalajara.">
+<meta property="og:title" content="Eder Jaramillo | Diseño, foto y video">
+<meta property="og:description" content="Diseño gráfico, fotografía y video para marcas y eventos.">
+<title>Eder Jaramillo Portafolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Concepto: claqueta y cuadro de cine. Titulares condensados tipo rótulo de rodaje, metadatos en mono como en una slate, tiles en proporción de pantalla ancha. Dark first. */
+:root{
+  --bg:#0e1013; --bg2:#15181d; --fg:#eceae4; --mute:#9a9ca3; --line:#272b32; --accent:#f0a23a; --accent-ink:#1a1204;
+  --t1:#2a3a52; --t2:#5a2e3a; --t3:#2f4a3d; --t4:#4a3a63; --t5:#5c4a2a; --t6:#244a52;
+  --display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --body:'Instrument Sans',system-ui,sans-serif;
+  --mono:'DM Mono',ui-monospace,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --bg:#f3f1ec; --bg2:#e9e6df; --fg:#14161a; --mute:#5d6068; --line:#d3cfc6; --accent:#b8650a; --accent-ink:#fff;
+  --t1:#b7c6dc; --t2:#e0b9c0; --t3:#b4d2c1; --t4:#cdc0e4; --t5:#e3d0a8; --t6:#a9d3da; color-scheme:light}}
+:root[data-theme="light"]{
+  --bg:#f3f1ec; --bg2:#e9e6df; --fg:#14161a; --mute:#5d6068; --line:#d3cfc6; --accent:#b8650a; --accent-ink:#fff;
+  --t1:#b7c6dc; --t2:#e0b9c0; --t3:#b4d2c1; --t4:#cdc0e4; --t5:#e3d0a8; --t6:#a9d3da; color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);padding-inline:20px;padding-block:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin-inline:auto}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;flex-wrap:wrap}
+nav .logo{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{text-decoration:none;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+nav ul a:hover{color:var(--accent)}
+.hero{padding-block:48px 56px;display:grid;gap:28px}
+.slate{display:flex;gap:18px;flex-wrap:wrap;border-block:1px solid var(--line);padding-block:10px}
+.hero h1{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.88;letter-spacing:.005em;font-size:clamp(64px,15vw,168px);margin:0;text-wrap:balance}
+.hero h1 span{display:block}
+.hero h1 .a{color:var(--accent)}
+.hero p.lead{max-width:56ch;font-size:19px;margin:0;color:var(--fg)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border:1px solid var(--fg);text-decoration:none;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;background:transparent;color:var(--fg)}
+.fab{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:50;width:54px;height:54px;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);text-decoration:none;border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,.3);transition:transform .2s,opacity .25s}
+.fab svg{width:26px;height:26px}
+.fab::after{content:"Escríbeme";position:absolute;right:66px;top:50%;transform:translateY(-50%) translateX(6px);opacity:0;pointer-events:none;white-space:nowrap;background:var(--bg2);color:var(--fg);border:1px solid var(--line);padding:6px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;transition:all .2s}
+.fab:hover,.fab:focus-visible{transform:scale(1.06)}
+.fab:hover::after,.fab:focus-visible::after{opacity:1;transform:translateY(-50%)}
+.fab.off{opacity:0;pointer-events:none;transform:scale(.8)}
+.btn.wa::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#25d366;margin-right:10px;vertical-align:middle}
+.btn.p.wa::before{box-shadow:0 0 0 2px var(--accent-ink)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:500}
+.btn:hover{transform:translateY(-2px)}
+section{padding-block:56px;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(36px,6vw,64px);line-height:.95;margin:0 0 28px;letter-spacing:.01em}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--line);background:transparent;color:var(--mute);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px}
+.card{display:flex;flex-direction:column;gap:10px;min-width:0}
+.card[hidden]{display:none}
+a.card{text-decoration:none;color:inherit}
+a.card:hover h3{color:var(--accent)}
+a.card:hover .frame{border-color:var(--accent)}
+.frame{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--c);display:flex;align-items:flex-end;padding:14px;border:1px solid var(--line)}
+.frame.tall{aspect-ratio:4/5}
+.frame:has(img)::before{display:none}
+dialog{background:var(--bg);border:1px solid var(--line);padding:0;max-width:min(94vw,900px);max-height:94vh}
+dialog::backdrop{background:rgba(0,0,0,.8)}
+.lbbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px}
+.lbbar button{position:static;background:none;border:1px solid var(--line);color:var(--fg);padding:6px 14px;cursor:pointer;font-size:16px}
+dialog img{display:block;max-width:100%;max-height:88vh;margin:auto}
+dialog #lbx{position:absolute;top:8px;right:8px;background:var(--bg);color:var(--fg);border:1px solid var(--line);padding:6px 12px;font-family:var(--mono);cursor:pointer}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+button.frame{width:100%;cursor:zoom-in;font:inherit;color:inherit;text-align:left}
+figure.card{margin:0}
+.frame::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(120% 90% at 85% 10%,rgba(255,255,255,.18),transparent 55%),
+  repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.04) 22px 23px)}
+.frame .tag{position:relative;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--bg);color:var(--fg);padding:4px 8px}
+.frame .big{position:absolute;right:14px;top:6px;font-family:var(--display);font-weight:900;font-size:84px;line-height:1;color:rgba(255,255,255,.22);text-transform:uppercase}
+.card h3{font-family:var(--display);text-transform:uppercase;font-weight:800;font-size:26px;line-height:1;margin:0;letter-spacing:.02em}
+.card p{margin:0;color:var(--mute);font-size:15px}
+
+
+#projects{grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:18px}
+.cat{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;text-decoration:none;color:#fff;background:var(--bg2);border:1px solid var(--line)}
+.catimg{position:absolute;inset:0;display:grid;gap:3px}
+.catimg img{width:100%;height:100%;object-fit:cover;display:block;min-height:0;transition:transform .6s}
+.catimg.grid{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.catimg.cols{grid-template-columns:1fr 1fr 1fr}
+.catimg.single{grid-template-columns:1fr}
+.cat:hover .catimg img{transform:scale(1.05)}
+.catover{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:22px;background:linear-gradient(to top,rgba(8,9,11,.92) 0%,rgba(8,9,11,.55) 38%,rgba(8,9,11,0) 62%)}
+.catover .mono{color:rgba(255,255,255,.75)}
+.catover h3{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(44px,7vw,68px);line-height:.9;margin:0;letter-spacing:.01em}
+.catover .meta{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:8px}
+.catover .meta b{font-weight:400;color:var(--accent);transition:transform .2s;font-size:18px}
+.cat:hover .meta b{transform:translateX(6px)}
+.cat:focus-visible{outline-offset:4px}
+.cat .play{top:42%}
+.card.proj{cursor:pointer;text-decoration:none;color:inherit}
+.card.proj .frame{aspect-ratio:4/3;border-color:var(--line)}
+.card.proj:hover .frame{border-color:var(--accent)}
+.card.proj:hover h3{color:var(--accent)}
+.frame .count{position:absolute;right:14px;bottom:14px;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:var(--accent-ink);padding:4px 8px}
+.proj .frame{display:block;padding:0}
+.proj .frame .tag{position:absolute;left:14px;bottom:14px}
+.mosaic{position:absolute;inset:0;display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:2px}
+.mosaic img{position:static;width:100%;height:100%;object-fit:cover}
+.mosaic img:first-child{grid-row:1/3}
+.back{display:inline-block;text-decoration:none;margin-bottom:20px}
+.back:hover{color:var(--accent)}
+.d-desc{max-width:62ch;margin:0 0 28px;color:var(--mute);font-size:17px}
+#d-grid .card .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:20px;padding-left:4px}
+#d-grid h3.sub{grid-column:1/-1;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:8px;margin-top:12px;font-weight:500}
+#d-grid h4.subsub{grid-column:1/-1;font-family:var(--display);font-size:28px;text-transform:uppercase;letter-spacing:.02em;margin:8px 0 0;font-weight:800}
+#d-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));align-items:start}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.about p{margin:0 0 16px;max-width:60ch}
+dl{margin:0;display:grid;gap:0}
+dl div{display:flex;justify-content:space-between;gap:16px;padding-block:12px;border-bottom:1px solid var(--line)}
+dt{color:var(--mute)} dd{margin:0;text-align:right;font-weight:500}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:0;border:1px solid var(--line)}
+.srv{padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:-1px 0 0 -1px;display:grid;gap:10px;align-content:start}
+.srv h3{font-family:var(--display);font-size:32px;text-transform:uppercase;margin:0;line-height:1;font-weight:800}
+.srv p{margin:0;color:var(--mute);font-size:15px}
+.srv ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.srv li{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);padding:3px 8px;color:var(--mute)}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px}
+.tools h3{margin:0 0 10px}
+.tools p{margin:0;font-size:17px}
+.contact{background:var(--bg2);margin-inline:-20px;padding-inline:20px}
+.contact .inner{max-width:1080px;margin-inline:auto;display:grid;gap:24px}
+.contact h2{font-size:clamp(48px,11vw,130px);margin:0}
+.contact h2 em{font-style:normal;color:var(--accent)}
+.mail{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.mail code{font-family:var(--mono);font-size:18px;word-break:break-all;user-select:all}
+footer{padding-block:28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.theme{background:none;border:1px solid var(--line);color:var(--mute);font-family:var(--mono);font-size:11px;padding:5px 10px;cursor:pointer;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:28px}.frame .big{font-size:60px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.btn:hover{transform:none}}
+.btn{transition:transform .15s}
+html,body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#top">Eder Jaramillo</a>
+    <ul>
+      <li><a href="#trabajo">Trabajo</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="slate mono"><span>Ameca, Jalisco</span><span>Zona Guadalajara</span><span>Disponible para proyectos</span></div>
+    <h1><span>Diseño</span><span class="a">Foto</span><span>Y video</span></h1>
+    <p class="lead">Soy Eder, diseñador, fotógrafo y filmmaker. Creo la imagen, las fotos y los videos que hacen que una marca, un evento o una persona se vean como lo que son. Estuve a cargo de la mayor parte del contenido visual del Carnaval Ameca 2026.</p>
+    <div class="cta">
+      <a class="btn p" href="#trabajo">Ver trabajo</a>
+      <a class="btn" href="#contacto">Cotizar un proyecto</a>
+      <a class="btn wa" href="https://wa.me/message/Q7Z2LERLV4WXB1" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <section id="trabajo">
+    <div id="home">
+      <h2>Trabajo seleccionado</h2>
+      <div class="grid" id="projects"></div>
+    </div>
+    <div id="detail" hidden>
+      <a class="back mono" href="#trabajo" id="back">← Todos los proyectos</a>
+      <span class="mono" id="d-cat"></span>
+      <h2 id="d-title"></h2>
+      <p class="d-desc" id="d-desc"></p>
+      <div class="grid" id="d-grid"></div>
+    </div>
+  </section>
+
+  <section id="servicios">
+    <h2>Qué hago</h2>
+    <div class="services">
+      <div class="srv"><span class="mono">Diseño gráfico</span><h3>Identidad y piezas</h3><p>Logotipo, carteles, redes sociales y material impreso con una línea visual que se reconoce.</p><ul><li>Photoshop</li><li>Illustrator</li><li>Affinity</li></ul></div>
+      <div class="srv"><span class="mono">Fotografía</span><h3>Foto de eventos y marca</h3><p>Cobertura de eventos, retrato y producto, con edición lista para publicar.</p><ul><li>Eventos</li><li>Retrato</li><li>Producto</li></ul></div>
+      <div class="srv"><span class="mono">Video</span><h3>Edición y motion</h3><p>Reels, videos de evento y animaciones, de la idea al archivo final.</p><ul><li>Premiere Pro</li><li>After Effects</li><li>DaVinci Resolve</li></ul></div>
+      <div class="srv"><span class="mono">Redes sociales</span><h3>Contenido y gestión</h3><p>Planeo y publico contenido para marcas personales y empresas.</p><ul><li>Community management</li><li>Calendario</li></ul></div>
+    </div>
+  </section>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <div class="about">
+      <div>
+        <p>Estudio Ingeniería en Sistemas Computacionales en el Instituto Tecnológico Superior de Jalisco, campus Zapopan, y trabajo como diseñador y fotógrafo desde hace más de un año.</p>
+        <p>En el H. Ayuntamiento de Ameca creé la mayor parte del contenido visual del Carnaval Ameca 2026 y animaciones para eventos como el de Navidad. Hoy trabajo por mi cuenta con marcas personales y empresas.</p>
+        <p>Como también programo (React Native y desarrollo web), puedo entregar la identidad visual y la aplicación o página que la acompaña.</p>
+      </div>
+      <dl>
+        <div><dt>Base</dt><dd>Ameca y Guadalajara</dd></div>
+        <div><dt>Trabajo actual</dt><dd>Freelance</dd></div>
+        <div><dt>Idiomas</dt><dd>Español, inglés</dd></div>
+        <div><dt>También hago</dt><dd>Apps y sitios web</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="herramientas">
+    <h2>Herramientas</h2>
+    <div class="tools">
+      <div><h3 class="mono">Diseño</h3><p>Photoshop, Illustrator, Affinity</p></div>
+      <div><h3 class="mono">Video y motion</h3><p>Premiere Pro, After Effects, DaVinci Resolve</p></div>
+      <div><h3 class="mono">Procesos</h3><p>Inteligencia artificial para automatizar tareas repetitivas y entregar más rápido</p></div>
+    </div>
+  </section>
+</div>
+
+<section class="contact" id="contacto">
+  <div class="inner">
+    <span class="mono">Escríbeme</span>
+    <h2>Hagamos algo <em>juntos</em></h2>
+    <div class="mail">
+      <code id="mail">jaramilloeder03@gmail.com</code>
+      <a class="btn p wa" href="https://wa.me/message/Q7Z2LERLV4WXB1" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+      <button class="btn" id="copy" type="button">Copiar correo</button>
+      <a class="btn" href="https://www.linkedin.com/in/ederjaramilloisc" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer class="mono"><span>© 2026 Eder Jaramillo</span><button class="theme" id="theme" type="button">Cambiar tema</button></footer>
+</div>
+
+<a class="fab" href="https://wa.me/message/Q7Z2LERLV4WXB1" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2.2-1.2-.9.9a4.6 4.6 0 0 1-2.4-2.4l.9-.9L10.7 7.5z" fill="currentColor" stroke="none"/></svg></a>
+<dialog id="lb"><button type="button" id="lbx">Cerrar</button><img id="lbi" alt=""><div class="lbbar"><button type="button" id="lbp" aria-label="Anterior">←</button><span class="mono" id="lbc"></span><button type="button" id="lbn" aria-label="Siguiente">→</button></div></dialog>
+<script>
+(function(){
+  var P=[
+   {id:'diseno',cat:'diseno',title:'Diseño',tag:'Diseño',ratio:'4/5',cover:['pub9','pub7','pub5'],mode:'cols',desc:'Diseño gráfico para el H. Ayuntamiento de Ameca, identidades de marca y gráficos para torneos de futbol.',sections:[{t:'Diseño para el H. Ayuntamiento',groups:[{t:'Carnaval Ameca 2026',items:[['jueves12','Cartel del jueves 12'],['domingo8','Cartel del domingo 8'],['cuenta','Historia de cuenta regresiva'],['kiosco','Venta de boletos'],['collage','Collage del carnaval'],['gracias','Gracias por tu asistencia']]},{t:'Publicaciones',items:[['pub1','Colores del Mundo: gran clausura'],['pub2','Colores del Mundo: ruta del desfile'],['pub3','El mundo llega a Ameca'],['pub4','Aviso de servicio de aseo'],['pub5','Inscríbete al Mercado Rosa'],['pub6','Convocatoria de apoyos DIF'],['pub7','Clases de yoga prenatal'],['pub8','Jornada de valoración médica'],['pub9','Clases de crochet'],['pub10','Jueves de Rodada para negocios'],['pub11','Vía Recreativa']]}]},{t:'Identidad de marca',items:[['gpantalla','La Gran Pantalla de Roma'],['satori','Studio Satori'],['grone','Grone']]},{t:'Copa Jalisco y Mundialito',items:[['copa1','Copa Jalisco: inicio varonil'],['copa2','Copa Jalisco: resultado'],['copa3','Copa Jalisco: selección femenil'],['mundial','Cartel del Mundialito']]}]},
+   {id:'fotografia',cat:'foto',title:'Fotografía',tag:'Fotografía',cover:['eq2','comida2','or2'],mode:'cols',ratio:'3/2',desc:'Fotografía comercial, retratos de grupo y fotografía gastronómica.',sections:[{t:'Comercial · O\'Reilly Autopartes',items:[['or1','Fachada y anuncio'],['or2','Mostrador de atención'],['or3','Pasillo de aceites y lubricantes']]},{t:'Selección femenil',items:[['eq1','Frente al palacio'],['eq2','Torre del reloj'],['eq3','Escalinata del palacio']]},{t:'Gastronomía',items:[['comida1','Sándwich y bebida'],['comida2','Papas con aderezo']]}]},
+   {id:'video',cat:'video',title:'Video y animación',tag:'Video',desc:'Spots, animaciones y videos para eventos, negocios y marcas. Cada pieza abre en Drive.',video:true,cover:['vspot'],mode:'single',ratio:'16/9',items:[
+    ['https://drive.google.com/file/d/1GBxhTdTo3pZnYCa6xLukUcuPl6EntHrs/view','Animación navideña','2025 · Luz y Esperanza, animación para el evento de Navidad.','vnavidad'],
+    ['https://drive.google.com/file/d/1Cz84fYpXgrZtCIzq7yLzZzV3opudCxPE/view','Spot Carnaval 2023','2023 · Spot de video para promover el carnaval.','vspot'],
+    ['https://drive.google.com/drive/folders/1_HA5bc3u8LJCiZudfeZgVFvi3KkIHjg4','Animaciones Morena','Intros y animaciones para eventos, en carpeta de proyectos.','vmorena'],
+    ['https://drive.google.com/file/d/1lKctn_cwibPdz2qHFEBL5zmnTEAPbOlK/view','Conceptos Finos','Video para un organizador de bodas y eventos.','vwedding'],
+    ['https://drive.google.com/file/d/1eIrmj4bXcNKaTp0Pz1jxu-8GDRfyDrY3/view','Video para negocio local','Video comercial para un negocio de Ameca.','vnegocio'],
+    ['https://drive.google.com/file/d/1xguEtHZZM_ucfodqpJMMTwU3QlJIW3IV/view','Logotipo animado','Animación de logotipo para un fotógrafo de bodas.','vlogo'],
+    ['https://drive.google.com/file/d/1VOx8fHwqo_DWpw_3exrmjhdjQ1lRqjha/view','Video promocional','Pieza de video, se abre en Drive.','vnuevo'],
+    ['https://drive.google.com/file/d/1fkYDFcDDEtmS8AlOCKeuJ8rzyoMuNmfa/view','Jonathan Joseph Foundation','Video para la fundación Jonathan Joseph Foundation.','vjjf']]}
+  ];
+  P.forEach(function(p){if(p.sections){p.items=[];p.sections.forEach(function(x){(x.groups||[x]).forEach(function(g){p.items=p.items.concat(g.items)})})}});
+  var $=function(i){return document.getElementById(i)};
+  function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e}
+  var home=$('home'),detail=$('detail'),grid=$('projects');
+  var colors=['var(--t2)','var(--t1)','var(--t3)','var(--t4)','var(--t5)'];
+  P.forEach(function(p,i){
+    var a=el('a','cat');a.href='#p-'+p.id;a.dataset.c=p.cat;
+    var im=p.cover.map(function(n){return '<img src="img/'+n+'.jpg" alt="" loading="lazy">'}).join('');
+    var subs=p.sections?p.sections.length:0;
+    var unit=p.video?'videos':(p.cat==='foto'?'fotos':'piezas');
+    a.innerHTML='<div class="catimg '+p.mode+'">'+im+'</div><div class="catover"><span class="mono">'+p.tag+(subs?' · '+subs+' subsecciones':'')+'</span><h3>'+p.title+'</h3><span class="meta">'+p.items.length+' '+unit+' <b aria-hidden="true">→</b></span></div>'+(p.video?'<span class="play" aria-hidden="true">▶</span>':'');
+    grid.appendChild(a);
+  });
+  var lb=$('lb'),lbi=$('lbi'),cur=[],idx=0;
+  function show(i){idx=(i+cur.length)%cur.length;lbi.src='img/'+cur[idx][0]+'.jpg';lbi.alt=cur[idx][1];$('lbc').textContent=cur[idx][1]+'  ·  '+(idx+1)+'/'+cur.length}
+  $('lbx').addEventListener('click',function(){lb.close()});
+  $('lbp').addEventListener('click',function(){show(idx-1)});
+  $('lbn').addEventListener('click',function(){show(idx+1)});
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+  lb.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1)});
+  function open(id){
+    var p=P.filter(function(x){return x.id===id})[0];
+    if(!p){home.hidden=false;detail.hidden=true;return}
+    home.hidden=true;detail.hidden=false;
+    $('d-cat').textContent=p.tag;$('d-title').textContent=p.title;$('d-desc').textContent=p.desc;
+    var g=$('d-grid');g.innerHTML='';
+    if(p.video){
+      g.style.gridTemplateColumns='';
+      p.items.forEach(function(v,i){var a=el('a','card');a.href=v[0];a.target='_blank';a.rel='noopener';
+        a.innerHTML='<div class="frame" style="--c:'+colors[i%5]+';aspect-ratio:'+p.ratio+'">'+(v[3]?'<img src="img/'+v[3]+'.jpg" alt="" loading="lazy">':'<span class="big">Video</span>')+'<span class="play" aria-hidden="true">▶</span><span class="tag">Ver en Drive</span></div><h3>'+v[1]+'</h3><p>'+v[2]+'</p>';g.appendChild(a)});
+    }else{
+      cur=p.items;
+      var n=0;
+      function put(g){g.items.forEach(function(it){var i=n++;var f=el('figure','card');
+          f.innerHTML='<button class="frame" type="button" style="aspect-ratio:'+p.ratio+'" aria-label="Ampliar: '+it[1]+'"><img src="img/'+it[0]+'.jpg" alt="'+it[1]+'" loading="lazy"></button><h3>'+it[1]+'</h3>';
+          f.firstChild.addEventListener('click',function(){show(i);lb.showModal()});grid.appendChild(f)})}
+      var grid=g;
+      (p.sections||[{t:'',items:p.items}]).forEach(function(sec){
+        if(sec.t){g.appendChild(el('h3','sub',sec.t))}
+        if(sec.groups){sec.groups.forEach(function(gr){g.appendChild(el('h4','subsub',gr.t));put(gr)})}else{put(sec)}
+      });
+    }
+  }
+  function route(){var h=location.hash;if(h.indexOf('#p-')===0){open(h.slice(3));$('trabajo').scrollIntoView()}else{home.hidden=false;detail.hidden=true}}
+  window.addEventListener('hashchange',route);route();
+  var fab=document.querySelector('.fab'),ct=document.getElementById('contacto');
+  if(fab&&ct&&window.IntersectionObserver){new IntersectionObserver(function(e){fab.classList.toggle('off',e[0].isIntersecting)}).observe(ct)}
+  var cp=document.getElementById('copy'),m=document.getElementById('mail');
+  cp.addEventListener('click',function(){
+    function ok(){cp.textContent='Copiado'}
+    function sel(){var r=document.createRange();r.selectNodeContents(m);var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Selecciona y copia'}
+    try{navigator.clipboard.writeText(m.textContent).then(ok,sel)}catch(e){sel()}
+  });
+  $('theme').addEventListener('click',function(){
+    var d=document.documentElement,dark=d.dataset.theme?d.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    d.dataset.theme=dark?'light':'dark';
+  });
+})();
+</script>
+
+</body>
+</html>
